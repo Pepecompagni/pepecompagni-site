@@ -1,6 +1,57 @@
 <!doctype html>
-<meta charset="utf-8">
-<title>Prueba</title>
-<body style="background:#fffbcc;font:24px system-ui;padding:30px">
-HOLA PEPE — SI VES ESTO, VERCEL ESTÁ SIRVIENDO BIEN EL CONTENIDO.
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pepe Compagni — Inicio</title>
+  <meta name="description" content="Página personal de Pepe Compagni: foto y breve presentación." />
+  <style>
+    :root{
+      --bg:#0f172a;      /* fondo oscuro elegante */
+      --card:#0b1220;    /* tarjeta */
+      --text:#e5e7eb;    /* texto claro */
+      --muted:#94a3b8;   /* texto secundario */
+      --accent:#a5b4fc;  /* enlaces */
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#4f46e5; }
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto}
+    .wrap{max-width:760px;margin:0 auto;padding:64px 20px}
+    .card{background:var(--card);border:1px solid rgba(148,163,184,.25);border-radius:20px;padding:28px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+    .center{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+    img.avatar{width:168px;height:168px;object-fit:cover;border-radius:9999px;border:3px solid rgba(255,255,255,.15);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    h1{font-size:28px;line-height:1.2;margin:6px 0 0}
+    p{margin:0}
+    p.muted{color:var(--muted)}
+    .links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    a.btn{color:var(--text);text-decoration:none;border:1px solid rgba(148,163,184,.35);padding:10px 14px;border-radius:999px}
+    a.link{color:var(--accent);text-decoration:none}
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card center">
+      <!-- ⚠️ Reemplaza la ruta de la imagen por la tuya: /assets/pepe.jpg -->
+      <img class="avatar" src="/assets/pepe.jpg" alt="Retrato de Pepe Compagni" />
+      <h1>Pepe Compagni</h1>
+      <p class="muted">Por el trabajo bien hecho</p>
+      <div class="bio" style="max-width:56ch">
+        <p>Soy Pepe Compagni, me gusta leer, ver y escuchar a gente inteligente, enérgica e íntegra.</p>
+        <p>Graduado en periodismo (Universidad de Sevilla) y máster en Relaciones Internacionales (Universidad Pablo de Olavide).</p>
+        <p>Intento revolucionar el aprendizaje de habilidades y la transmisión de conocimientos en Docensas, haciendo una aplicación inteligente de los avances tecnológicos a la formación.</p>
+        <p>También estoy co-construyendo "El Dilema del Avestruz", un podcast sobre el Trabajo y su futuro.</p>
+        <p>Me gusta aprender cosas nuevas, el deporte, viajar, leer, el arte, salir, entrar, reírme... como a todo el mundo.</p>
+      </div>
+      <div class="links">
+        <a class="btn" href="mailto:hola@pepecompagni.com">Escríbeme</a>
+        <a class="btn" href="/podcast.html">Podcast</a>
+        <a class="btn" href="/sobre-mi.html">Sobre mí</a>
+      </div>
+    </main>
+    <footer>© <span id="y"></span> Pepe Compagni — <a class="link" href="mailto:hola@pepecompagni.com">hola@pepecompagni.com</a></footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
+</html>
