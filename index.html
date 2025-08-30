@@ -19,12 +19,12 @@
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto}
     .wrap{max-width:760px;margin:0 auto;padding:64px 20px}
     .card{background:var(--card);border:1px solid rgba(148,163,184,.25);border-radius:20px;padding:28px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-    .center{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+    .center{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:16px}
     img.avatar{width:168px;height:168px;object-fit:cover;border-radius:9999px;border:3px solid rgba(255,255,255,.15);box-shadow:0 8px 30px rgba(0,0,0,.35)}
     h1{font-size:28px;line-height:1.2;margin:6px 0 0}
     p{margin:0}
     p.muted{color:var(--muted)}
-    .links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-top:10px}
     a.btn{color:var(--text);text-decoration:none;border:1px solid rgba(148,163,184,.35);padding:10px 14px;border-radius:999px}
     a.link{color:var(--accent);text-decoration:none}
     footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
@@ -33,10 +33,10 @@
 <body>
   <div class="wrap">
     <main class="card center">
-      <WhatsApp Image 2025-08-30 at 18.17.44.jpeg>
-      <img class="avatar" src="/assets/pepe.jpg" alt="Retrato de Pepe Compagni" />
+      <!-- ⚠️ Reemplaza la ruta de la imagen por la tuya: /assets/pepe.jpg -->
+      <img class="avatar" src="/WhatsApp%20Image%202025-08-30%20at%2018.17.44.jpeg" alt="Retrato de Pepe Compagni" />
       <h1>Pepe Compagni</h1>
-      <p class="muted">Por el trabajo bien hecho</p>
+      <p class="muted">Yo en 15 segundos</p>
       <div class="bio" style="max-width:56ch">
         <p>Soy Pepe Compagni, me gusta leer, ver y escuchar a gente inteligente, enérgica e íntegra.</p>
         <p>Graduado en periodismo (Universidad de Sevilla) y máster en Relaciones Internacionales (Universidad Pablo de Olavide).</p>
@@ -45,13 +45,14 @@
         <p>Me gusta aprender cosas nuevas, el deporte, viajar, leer, el arte, salir, entrar, reírme... como a todo el mundo.</p>
       </div>
       <div class="links">
-        <a class="btn" href="mailto:hola@pepecompagni.com">Escríbeme</a>
+        <a class="btn" href="mailto:contacto@pepecompagni.com">Escríbeme</a>
         <a class="btn" href="/podcast.html">Podcast</a>
         <a class="btn" href="/sobre-mi.html">Sobre mí</a>
       </div>
     </main>
-    <footer>© <span id="y"></span> Pepe Compagni — <a class="link" href="mailto:contacto@pepecompagni.com">contacto@pepecompagni.com</a></footer>
+    <footer>© <span id="y"></span> Pepe Compagni — <a class="link" href="mailto:contacto@pepecompagni.com">hola@pepecompagni.com</a></footer>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+
