@@ -3,54 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pepe Compagni — Inicio</title>
-  <meta name="description" content="Página personal de Pepe Compagni: foto y breve presentación." />
+  <title>Pepe Compagni — entrevistas, notas y aprendizajes</title>
+  <meta name="description" content="Página personal de Pepe Compagni: foto, bio breve, podcast y blog." />
   <style>
     :root{
-      --bg:#0f172a;      /* fondo oscuro elegante */
-      --card:#0b1220;    /* tarjeta */
-      --text:#e5e7eb;    /* texto claro */
-      --muted:#94a3b8;   /* texto secundario */
-      --accent:#a5b4fc;  /* enlaces */
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f8fafc; --card:#ffffff; --text:#0f172a; --muted:#475569; --accent:#4f46e5; }
+      --bg:#ffffff;         /* fondo claro */
+      --text:#111827;       /* casi negro */
+      --muted:#6b7280;      /* gris discreto */
+      --card:#f8fafc;       /* tarjeta muy clara */
+      --border:#e5e7eb;     /* borde suave */
+      --accent:#0f766e;     /* verde naturaleza */
+      --accent-2:#b45309;   /* marrón madera (secundario) */
     }
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto}
-    .wrap{max-width:760px;margin:0 auto;padding:64px 20px}
-    .card{background:var(--card);border:1px solid rgba(148,163,184,.25);border-radius:20px;padding:28px;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-    .center{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:16px}
-    img.avatar{width:168px;height:168px;object-fit:cover;border-radius:9999px;border:3px solid rgba(255,255,255,.15);box-shadow:0 8px 30px rgba(0,0,0,.35)}
-    h1{font-size:28px;line-height:1.2;margin:6px 0 0}
-    p{margin:0}
-    p.muted{color:var(--muted)}
-    .links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-top:10px}
-    a.btn{color:var(--text);text-decoration:none;border:1px solid rgba(148,163,184,.35);padding:10px 14px;border-radius:999px}
+    .container{max-width:980px;margin:0 auto;padding:28px 20px}
+    header{display:flex;gap:16px;justify-content:space-between;align-items:center;margin-bottom:16px}
+    nav a{color:var(--text);text-decoration:none;margin-left:14px}
+    nav a.btn{border:1px solid var(--border);padding:8px 12px;border-radius:999px}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;margin-top:12px}
+    .hero-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px}
+    .hero-inner{display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+    .avatar{width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid rgba(0,0,0,.05)}
+    h1{font-size:32px;line-height:1.15;margin:0}
+    .kicker{color:var(--muted);margin-top:4px}
+    .bio{max-width:62ch;margin-top:8px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .cta a{color:var(--text);text-decoration:none;border:1px solid var(--border);padding:10px 14px;border-radius:999px}
+    .cta a.primary{background:var(--accent);border-color:var(--accent);color:white}
+    .cta a.secondary{border-color:var(--accent-2)}
+
+    @media (min-width: 840px){
+      .hero-inner{grid-template-columns:180px 1fr}
+    }
+
+    /* SECTIONS */
+    section{margin-top:36px}
+    section h2{font-size:22px;margin:0 0 12px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px}
+
+    /* Podcast embeds */
+    .players{display:grid;gap:12px}
+    .players iframe{width:100%;height:180px;border:0;border-radius:12px}
+
+    /* Blog list */
+    .posts{display:grid;gap:12px}
+    .post{border:1px solid var(--border);border-radius:14px;padding:14px;background:#fff}
+    .post time{color:var(--muted);font-size:14px}
+
+    footer{margin:40px 0 20px;color:var(--muted);font-size:14px;text-align:center}
     a.link{color:var(--accent);text-decoration:none}
-    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <main class="card center">
-      <!-- ⚠️ Reemplaza la ruta de la imagen por la tuya: /assets/pepe.jpg -->
-      <img class="avatar" src="/WhatsApp%20Image%202025-08-30%20at%2018.17.44.jpeg" alt="Retrato de Pepe Compagni" />
-      <h1>Pepe Compagni</h1>
-      <p class="muted">Yo en 15 segundos</p>
-      <div class="bio" style="max-width:56ch">
-        <p>Soy Pepe Compagni, me gusta leer, ver y escuchar a gente inteligente, enérgica e íntegra.</p>
-        <p>Graduado en periodismo (Universidad de Sevilla) y máster en Relaciones Internacionales (Universidad Pablo de Olavide).</p>
-        <p>Intento revolucionar el aprendizaje de habilidades y la transmisión de conocimientos en Docensas, haciendo una aplicación inteligente de los avances tecnológicos a la formación.</p>
-        <p>También estoy co-construyendo "El Dilema del Avestruz", un podcast sobre el Trabajo y su futuro.</p>
-        <p>Me gusta aprender cosas nuevas, el deporte, viajar, leer, el arte, salir, entrar, reírme... como a todo el mundo.</p>
+  <div class="container">
+    <header>
+      <strong>Pepe Compagni</strong>
+      <nav>
+        <a href="mailto:contacto@pepecompagni.com" class="btn">Escríbeme</a>
+        <a href="/sobre-mi.html">Sobre mí</a>
+        <a href="/blog">Blog</a>
+        <a href="/podcast.html">Podcast</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">Twitter</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-inner">
+          <!-- ⚠️ Recomendado: renombra tu foto a /assets/pepe.jpg (sin espacios). De momento usamos la ruta URL-codificada: -->
+          <img class="avatar" src="/WhatsApp%20Image%202025-08-30%20at%2018.17.44.jpeg" alt="Retrato de Pepe Compagni" />
+          <div>
+            <h1>Pepe Compagni</h1>
+            <div class="kicker">Trabajo, aprendizaje y conversaciones que valen la pena.</div>
+            <p class="bio">Me gusta leer, ver y escuchar a gente inteligente, enérgica e íntegra. Periodista (US) y máster en RR.II. (UPO). En Docensas aplico tecnología para aprender habilidades de verdad. Co‑construyo <em>El Dilema del Avestruz</em>, un podcast sobre el trabajo y su futuro.</p>
+            <div class="cta">
+              <a class="primary" href="mailto:contacto@pepecompagni.com">¿Hablamos?</a>
+              <a class="secondary" href="/podcast.html">Ir al podcast</a>
+              <a href="/sobre-mi.html">Sobre mí</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="links">
-        <a class="btn" href="mailto:contacto@pepecompagni.com">Escríbeme</a>
-        <a class="btn" href="/podcast.html">Podcast</a>
-        <a class="btn" href="/sobre-mi.html">Sobre mí</a>
+    </section>
+
+    <!-- SOBRE MÍ CORTO -->
+    <section id="sobre-mi">
+      <h2>Yo en 15 segundos</h2>
+      <div class="card">
+        <p>Soy Pepe Compagni: curioso, trabajador y con ganas de entender. Me interesan el oficio, la ética y las herramientas para aprender mejor. Aquí encontrarás entrevistas y notas con gente que merece la pena.</p>
       </div>
-    </main>
-    <footer>© <span id="y"></span> Pepe Compagni — <a class="link" href="mailto:contacto@pepecompagni.com">hola@pepecompagni.com</a></footer>
+    </section>
+
+    <!-- PODCAST -->
+    <section id="podcast">
+      <h2>Podcast — El Dilema del Avestruz</h2>
+      <div class="card players">
+        <p class="muted">Pega aquí los reproductores cuando tengas el tráiler.</p>
+        <!-- Spotify: sustituye XXXXX por tu show/episodio -->
+        <iframe src="https://open.spotify.com/embed/episode/XXXXXXXX"></iframe>
+        <!-- YouTube: sustituye YYYYYYYYY por el ID del vídeo -->
+        <iframe style="height:315px" src="https://www.youtube.com/embed/YYYYYYYYY" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="posts">
+        <a class="post" href="#"><time>2025‑09‑01</time><br><strong>Bienvenida: qué voy a publicar aquí</strong></a>
+        <a class="post" href="#"><time>2025‑09‑05</time><br><strong>Aprender habilidades sin humo: mi enfoque</strong></a>
+        <a class="post" href="#"><time>2025‑09‑12</time><br><strong>Notas de la primera entrevista</strong></a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Pepe Compagni — <a class="link" href="mailto:contacto@pepecompagni.com">contacto@pepecompagni.com</a>
+    </footer>
   </div>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
